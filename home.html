@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>playNchatZone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <nav class="nav-bar">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#game" class="nav-link">PlayGame</a></li>
+            <li><a href="#chatbot" class="nav-link">Chatbot</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+
+    </nav>
+
+    <section id="home" class="home-page">
+        <div class="main">
+            <div class="main-info">
+                Welcome to my digital world, where my ideas and creativity come alive.
+           
+            </div>
+            <div class="logo"></div>
+        </div>
+    </section>
+
+    <hr />
+
+    <section id="game">
+        <div class="game-play">
+            <div class="game-info">
+                Let’s Play & Relax your brain with this classic game
+                <br />
+                <span><i>Sometimes, you learn even while playing</i></span>
+            </div>
+            <div class="game-logo">
+                <div class="buttons">
+                    <button class="box" id="box1">x</button>
+                    <button class="box" id="box2">o</button>
+                    <button class="box" id="box3">x</button>
+                    <button class="box" id="box4">o</button>
+                    <button class="box" id="box5">x</button>
+                    <button class="box" id="box6">o</button>
+                    <button class="box" id="box7">x</button>
+                    <button class="box" id="box8">o</button>
+                    <button class="box" id="box9">o</button>
+                </div>
+                <a href="tic_tac_toe.html" target="_blank"><button id="start">Play Game</button></a>
+            </div>
+        </div>
+        <script src="animation.js"></script>
+    </section>
+
+    <hr />
+    <section id="chatbot">
+        <div class="chatbot-container">
+            <h2>Need Help? I'm your virtual buddy!</h2>
+            <p>Talk with my mini AI chatbot made with ❤️</p>
+        </div>
+
+        <div class="chat-container">
+            <div class="chat-header">
+                <h1>CodeMate</h1>
+            </div>
+
+            <div class="chat-box" id="chat-box">
+                <!-- Messages will appear here -->
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="message-input" placeholder="Type a message..." />
+                <button onclick="sendMessage()" id="send-button"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        From idea 💡 to code 💻 — All by Muskan Bashir | © 2025
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

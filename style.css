@@ -1,0 +1,688 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    background-color: rgb(24, 4, 46);
+}
+
+section {
+    height: 100vh;
+    padding-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+
+}
+
+/* navbar logic */
+.nav-bar {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(35, 4, 63);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    height: 7rem;
+    background-color: rgb(35, 4, 63);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a {
+    margin: 0 6rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #b568ff;
+    font-weight: bold;
+    border-bottom: 2px solid #b568ff;
+}
+
+.hamburger {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+hr {
+    width: 100%
+}
+
+/* Home Page */
+.home-page .main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 4rem 2rem;
+    margin-left: 10vw;
+}
+
+.main-info {
+    font-size: 3rem;
+    flex: 1 1 300px;
+    margin: auto 1rem;
+    line-height: 1.4;
+    min-width: 280px;
+    margin-right: 5rem;
+
+
+}
+
+.logo {
+    background-image: url('homeimg.jpg');
+    background-size: cover;
+    margin-right: 4rem;
+    height: 50vh;
+    width: 50vh;
+    flex: 1 1 300px;
+    margin: auto 1rem;
+    margin-right: 7rem;
+}
+
+/* Game Section */
+#game {
+    padding: 4rem 2rem;
+}
+
+.game-play {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.game-info {
+    font-size: 3rem;
+    flex: 1 1 300px;
+    margin: auto 1rem;
+    min-width: 280px;
+    margin-left: 10vw;
+}
+
+span {
+    color: violet;
+    font-size: 2rem;
+}
+
+.game-logo {
+    flex: 1 1 300px;
+    margin: auto 1rem;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.box {
+    height: 60px;
+    width: 60px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 10px rgba(172, 170, 170, 0.7);
+    font-size: 2.5rem;
+    background-color: red;
+    color: yellow;
+    cursor: pointer;
+}
+
+#start {
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 1.5rem;
+    background-color: rgb(117, 184, 17);
+    box-shadow: 0 0 1.2rem yellow;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#start:hover {
+    background-color: rgb(94, 148, 13);
+}
+
+@keyframes rotateZ360 {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.rotate {
+    animation: rotateZ360 1s linear;
+}
+
+/* Chatbot Section */
+#chatbot {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px 20px;
+
+    margin: 0 auto;
+}
+
+/* Text Section */
+.chatbot-container {
+    width: 50%;
+    font-size: 3rem;
+    flex: 1 1 300px;
+    margin: auto 1rem;
+    min-width: 280px;
+    margin-left: 10vw;
+
+}
+
+.chatbot-container h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.chatbot-container p {
+    font-size: 2rem;
+    color: rgb(176, 4, 176);
+}
+
+/* Chat Box Section */
+.chat-container {
+    width: 450px;
+    min-width: 300px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    background-color: #fefefe;
+    border-radius: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 4rem;
+    margin-right: 4rem;
+}
+
+.chat-header {
+    background-color: #f9c2d1;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 40% 60%;
+    border-bottom-right-radius: 40% 60%;
+}
+
+.chat-header h1 {
+    font-size: 2.2rem;
+    color: #7a1f5c;
+}
+
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #ece6f8;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.message {
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 12px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.message.bot {
+    background-color: #5215b4;
+    color: #fff;
+    border-radius: 0 12px 12px 12px;
+    align-self: flex-start;
+}
+
+.message.user {
+    background-color: #890ca2;
+    color: #fff;
+    border-radius: 12px 0 12px 12px;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+}
+
+.input-area {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 1rem;
+}
+
+.input-area button {
+    background-color: #a259ff;
+    border: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* footer */
+footer {
+    background-color: #251831;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    width: 100%
+}
+
+/* tic_tac_toe */
+h1 {
+    color: yellow;
+    font-size: 4em;
+    padding: 1rem;
+}
+
+body {
+    height: 70vh;
+    color: white;
+    text-align: center;
+    transition: opacity 10s ease-in;
+}
+
+
+
+#msg {
+    color: chocolate;
+    font-size: 5vmin;
+}
+
+.msg-container {
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.hide {
+    display: none;
+}
+
+#new_game {
+    padding: 1.2rem;
+    border-radius: 2.5rem;
+    font-size: 1.5rem;
+    background: rgb(102, 16, 102);
+    color: aliceblue;
+    box-shadow: 0 0 1.5rem rgb(192, 24, 52);
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons_container {
+    height: 60vh;
+    width: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vh;
+}
+
+.gamebox {
+    height: 18vh;
+    width: 18vh;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1.5rem rgb(172, 170, 170);
+    font-size: 120px;
+    background-color: rgb(133, 32, 32);
+    color: rgb(255, 255, 26);
+
+}
+
+#reset {
+    padding: 1.2rem 3rem;
+    border-radius: 1.5rem;
+    font-size: 2rem;
+    border-radius: 40px;
+    background-color: rgb(11, 115, 42);
+    color: white;
+    border: none;
+    box-shadow: 0 0 1.5rem rgb(210, 210, 3);
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    @media (max-width: 991px) {
+        .nav-links {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgb(35, 4, 63);
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        .nav-links.open {
+            max-height: 300px;
+        }
+
+        .hamburger {
+            display: block;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+        }
+    }
+
+    .main-info,
+    .logo,
+    .game-info,
+    .game-logo {
+        flex: 1 1 100%;
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+
+    .buttons {
+        max-width: 40%;
+    }
+
+    @media (max-width: 596px) {
+        .buttons {
+            max-width: 40%;
+            display: flex;
+            text-align: center;
+        }
+
+        .box {
+            height: 40px;
+            width: 40px;
+            font-size: 2rem;
+        }
+
+        #start {
+            margin-top: 2rem;
+            font-size: 1rem;
+            padding: 10px;
+            cursor: pointer;
+
+        }
+    }
+
+    @media (max-width: 596px) {
+        .buttons {
+            max-width: 35%;
+            display: flex;
+            align-items: center;
+        }
+
+        .box {
+            height: 30px;
+            width: 30px;
+            font-size: 1.5rem;
+        }
+
+        #start {
+            margin-top: 2rem;
+            font-size: 1rem;
+            padding: 7px;
+            cursor: pointer;
+
+        }
+    }
+
+    /* media query for my chatbot section */
+    @media (max-width: 1200px) {
+        #chatbot {
+            gap: 30px;
+        }
+
+        .chatbot-container {
+            padding: 8rem 0;
+            margin-right: 4rem;
+        }
+
+        .chat-container {
+            width: 400px;
+        }
+    }
+
+
+    @media (max-width: 991px) {
+        #chatbot {
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .chatbot-container {
+            width: 100%;
+            padding: 0;
+            margin: 0 0 20px 0;
+            text-align: center;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 500px;
+
+        }
+    }
+
+    @media (max-width: 576px) {
+        .chat-header h1 {
+            font-size: 1.8rem;
+        }
+
+        .chatbot-container h2 {
+            font-size: 1.8rem;
+        }
+
+        .chatbot-container p {
+            font-size: 1.2rem;
+        }
+
+        .input-area input {
+            padding: 12px 15px;
+            font-size: 0.9rem;
+        }
+    }
+}
+/* responsive design foy my tic_tac_toe game */
+@media screen and (max-width: 1199px) {
+    h1 {
+        font-size: 3.6rem;
+        padding: 3.5rem;
+        margin-top: 10rem;
+    }
+
+    .container {
+        height: 40vh;
+    }
+
+    .buttons_container {
+        height: 30vh;
+        width: 40vh;
+    }
+
+    .gamebox {
+        height: 10vh;
+        width: 10vh;
+        font-size: 7rem;
+        box-shadow: 0 0 1.2rem rgb(172, 170, 170);
+    }
+
+    .msg-container {
+        height: 120vmin;
+        margin-top: 6rem;
+    }
+
+    @media screen and (max-width: 991px) {
+        h1 {
+            font-size: 3.5rem;
+            margin-top: 15rem;
+        }
+
+        .container {
+            height: 40vh;
+        }
+
+        .buttons_container {
+            height: 25vh;
+            width: 30vh;
+        }
+
+        .gamebox {
+            height: 8vh;
+            width: 8vh;
+            font-size: 5rem;
+            box-shadow: 0 0 1.3rem rgb(172, 170, 170);
+        }
+
+        #reset {
+            padding: 1.6rem;
+            font-size: 2rem;
+            border-radius: 4rem;
+            margin-top: 2rem;
+        }
+
+        .msg-container {
+            height: 125vmin;
+            margin-top: 8rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        h1 {
+            font-size: 3rem;
+            margin-top: 18rem;
+        }
+
+        .container {
+            height: 21vh;
+        }
+
+        .buttons_container {
+            height: 15vh;
+            width: 25vh;
+        }
+
+        .gamebox {
+            height: 6vh;
+            width: 6vh;
+            font-size: 3.5rem;
+            box-shadow: 0 0 1.2rem rgb(172, 170, 170);
+        }
+
+        #reset {
+            padding: 1.4rem;
+            font-size: 1.5rem;
+            border-radius: 3.5rem;
+            margin-top: 10rem;
+        }
+
+        .msg-container {
+            height: 130vmin;
+            margin-top: 14rem;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 20rem;
+        }
+
+        .container {
+            height: 18vh;
+        }
+
+        .buttons_container {
+            height: 15vh;
+            width: 18vh;
+        }
+
+        .gamebox {
+            height: 5vh;
+            width: 5vh;
+            font-size: 2.5rem;
+            box-shadow: 0 0 1.1rem rgb(172, 170, 170);
+        }
+
+        #reset {
+            padding: 1.2rem;
+            font-size: 1.2rem;
+            border-radius: 3rem;
+            margin-top: 8rem;
+        }
+
+        .msg-container {
+            height: 170vmin;
+            margin-top: 16rem;
+        }
+    }
+}
